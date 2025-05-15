@@ -34,19 +34,47 @@ The collected data is stored in a structured **CSV file** for easy processing.
 
 ---
 
-### 🧠 **Modeling & Prediction (Phase 2)**
+Phase 2: Modeling & Prediction
 
-* **Objective:** Predict whether a movie's audience score is **positive** (>=50%) or **negative** (<50%).
-* **Algorithms Used:**
+🧠 Objective
 
-  * XGBoost (primary model)
-  * Random Forest
-  * Voting Classifier (XGBoost + Random Forest + SVM)
-  * Logistic Regression with TF-IDF
-* **Text Features:**
+Predict whether a movie's audience score is positive (>=50%) or negative (<50%).
 
-  * TF-IDF vectors derived from movie synopsis
-  * Sentiment analysis using TextBlob
+🛠️ Data Preprocessing
+
+*Converted movie duration from hours and minutes to total minutes.
+*Encoded Rating using LabelEncoder.
+*One-hot encoded Genre.
+*Extracted top 10 directors and categorized others as "Other".
+*Extracted presence of numbers in movie titles as a binary feature.
+*Applied TF-IDF vectorization on movie synopsis.
+*Multiplied Audience Review Count by 1000 for accurate representation.
+
+🚀 Modeling Approaches:
+Primary Model:
+
+XGBoost Classifier
+
+Achieved 80% accuracy after tuning hyperparameters and handling class imbalance using scale_pos_weight.
+
+Other Models Tried:
+
+Logistic Regression with TF-IDF
+
+XGBoost without TF-IDF
+
+Best Accuracy:
+
+XGBoost with:
+
+n_estimators=400
+
+max_depth=6
+
+learning_rate=0.05
+
+scale_pos_weight=0.35/0.65
+
 
 ---
 
