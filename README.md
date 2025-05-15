@@ -42,13 +42,13 @@ Predict whether a movie's audience score is positive (>=50%) or negative (<50%).
 
 🛠️ Data Preprocessing
 
-*Converted movie duration from hours and minutes to total minutes.
-*Encoded Rating using LabelEncoder.
-*One-hot encoded Genre.
-*Extracted top 10 directors and categorized others as "Other".
-*Extracted presence of numbers in movie titles as a binary feature.
-*Applied TF-IDF vectorization on movie synopsis.
-*Multiplied Audience Review Count by 1000 for accurate representation.
+  *Converted movie duration from hours and minutes to total minutes.
+  *Encoded Rating using LabelEncoder.
+  *One-hot encoded Genre.
+  *Extracted top 10 directors and categorized others as "Other".
+  *Extracted presence of numbers in movie titles as a binary feature.
+  *Applied TF-IDF vectorization on movie synopsis.
+  *Multiplied Audience Review Count by 1000 for accurate representation.
 
 🚀 Modeling Approaches:
 Primary Model:
