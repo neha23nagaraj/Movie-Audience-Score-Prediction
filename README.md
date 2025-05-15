@@ -34,47 +34,41 @@ The collected data is stored in a structured **CSV file** for easy processing.
 
 ---
 
-Phase 2: Modeling & Prediction
+### Phase 2: Modeling & Prediction
 
-🧠 Objective
+#### 🧠 Objective
 
 Predict whether a movie's audience score is positive (>=50%) or negative (<50%).
 
-🛠️ Data Preprocessing
+#### 🛠️ Data Preprocessing
 
-  *Converted movie duration from hours and minutes to total minutes.
-  *Encoded Rating using LabelEncoder.
-  *One-hot encoded Genre.
-  *Extracted top 10 directors and categorized others as "Other".
-  *Extracted presence of numbers in movie titles as a binary feature.
-  *Applied TF-IDF vectorization on movie synopsis.
-  *Multiplied Audience Review Count by 1000 for accurate representation.
+* Converted movie duration from hours and minutes to total minutes.
+* Encoded Rating using LabelEncoder.
+* One-hot encoded Genre.
+* Extracted top 10 directors and categorized others as "Other".
+* Extracted presence of numbers in movie titles as a binary feature.
+* Applied TF-IDF vectorization on movie synopsis.
+* Multiplied Audience Review Count by 1000 for accurate representation.
 
-🚀 Modeling Approaches:
-Primary Model:
+#### 🚀 Modeling Approaches: Primary Model
 
-XGBoost Classifier
+**XGBoost Classifier**
 
-Achieved 80% accuracy after tuning hyperparameters and handling class imbalance using scale_pos_weight.
+* Achieved **80% accuracy** after tuning hyperparameters and handling class imbalance using `scale_pos_weight`.
 
-Other Models Tried:
+#### 💡 Other Models Tried:
 
-Logistic Regression with TF-IDF
+* Logistic Regression with TF-IDF
+* XGBoost without TF-IDF
 
-XGBoost without TF-IDF
+#### 📊 Best Accuracy:
 
-Best Accuracy:
+**XGBoost with:**
 
-XGBoost with:
-
-n_estimators=400
-
-max_depth=6
-
-learning_rate=0.05
-
-scale_pos_weight=0.35/0.65
-
+* n\_estimators = 400
+* max\_depth = 6
+* learning\_rate = 0.05
+* scale\_pos\_weight = 0.35/0.65
 
 ---
 
