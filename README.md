@@ -70,7 +70,7 @@ The collected data is stored in a structured **CSV file** for easy processing.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/aman3singh/movie-audience-score-prediction.git
+   git clone https://github.com/neha23nagaraj/movie-audience-score-prediction.git
    ```
 2. Install the required libraries:
 
