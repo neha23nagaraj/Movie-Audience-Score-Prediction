@@ -30,7 +30,7 @@ This project aims to predict the **audience score** of movies based on various f
   * Audience Review Count
   * Audience Score
 
-The collected data is stored in a structured **CSV file** for easy processing.
+The collected data (500+ movies) is stored in a structured **CSV file** for easy processing.
 
 ---
 
